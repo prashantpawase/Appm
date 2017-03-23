@@ -38,8 +38,8 @@ public class flipkart {
         capabilities.setCapability("appPackage", "com.flipkart.android");
         capabilities.setCapability("appActivity", "com.flipkart.android.SplashActivity");
 
-
         driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), capabilities);
+        Thread.sleep(10000);
         driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
         Thread.sleep(10000);
 
