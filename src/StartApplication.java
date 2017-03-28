@@ -32,6 +32,11 @@ public class StartApplication {
         capabilities.setCapability("deviceName", "PP");
         capabilities.setCapability("platformVersion", "5.1.1");
         capabilities.setCapability("platformName", "Android");
+
+        /*  capabilities.setCapability("deviceName", "Mi 4i");
+        capabilities.setCapability("platformVersion", "5.0.2");
+      */
+
         capabilities.setCapability("app", app.getAbsolutePath());
      /*
         capabilities.setCapability("appPackage", "com.edunuts.edunutsprofessional");
@@ -42,9 +47,8 @@ public class StartApplication {
         capabilities.setCapability("appPackage", "com.tutor.edunuts.mytutor");
         capabilities.setCapability("appActivity", "com.tutor.edunuts.mytutor.activity.SpalshActivity");
 
-
-
         driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), capabilities);
+        Thread.sleep(10000);
         driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
         Thread.sleep(10000);
 /*
