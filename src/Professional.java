@@ -1,5 +1,5 @@
 /**
- * Created by prashant on 21/3/17.
+ * Created by prashant on 10/4/17.
  */
 
 
@@ -7,14 +7,18 @@ import io.appium.java_client.android.AndroidDriver;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
+import org.openqa.selenium.interactions.Actions;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 
-public class StartApplication {
+public class Professional {
 
     private static AndroidDriver driver;
 
@@ -24,50 +28,23 @@ public class StartApplication {
 
         File classpathRoot = new File(System.getProperty("user.dir"));
         File appDir = new File(classpathRoot, "/AP/");
-        //       File app = new File(appDir, "app-debug.apk");
-        File app = new File(appDir, "app-debugg.apk");
+        File app = new File(appDir, "app-debug.apk");
+
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
-//        capabilities.setCapability("deviceName", "PP");
-   /*     capabilities.setCapability("deviceName","pp");
-        capabilities.setCapability("platformVersion", "5.1.1");
-    */
         capabilities.setCapability("platformName", "Android");
-
-/*
-        capabilities.setCapability("deviceName","jj");
-        capabilities.setCapability("platformVersion", "4.4.2");
-*/
-
-
-
         capabilities.setCapability("deviceName","pp");
         capabilities.setCapability("platformVersion", "5.1.1");
-
-
-
-        /*  capabilities.setCapability("deviceName", "Mi 4i");
-        capabilities.setCapability("platformVersion", "5.0.2");
-      */
-
         capabilities.setCapability("app", app.getAbsolutePath());
-/*
-
         capabilities.setCapability("appPackage", "com.edunuts.edunutsprofessional");
         capabilities.setCapability("appActivity", "com.edunuts.edunutsprofessional.SplashActivity");
-*/
-
-
-
-        capabilities.setCapability("appPackage", "com.tutor.edunuts.mytutor");
-        capabilities.setCapability("appActivity", "com.tutor.edunuts.mytutor.activity.SpalshActivity");
 
         driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), capabilities);
         Thread.sleep(10000);
         driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
         Thread.sleep(10000);
-/*
+
         WebElement START = driver.findElement(By.id("com.edunuts.edunutsprofessional:id/btn_start"));
         START.click();
 
@@ -80,23 +57,11 @@ public class StartApplication {
         WebElement LOGIN = driver.findElement(By.id("com.edunuts.edunutsprofessional:id/btn_login"));
         LOGIN.click();
 
-*/
+        WebElement Search = driver.findElementByClassName("android.support.v7.widget.LinearLayoutCompat");
+        Search.click();
+        Search.sendKeys("Chandrakant");
 
 
-/*
-
-        WebElement START = driver.findElement(By.className("android.widget.Button"));
-        START.click();
-
-        WebElement MobileNumber = driver.findElement(By.id("com.tutor.edunuts.mytutor:id/et_email"));
-        MobileNumber.sendKeys("7750089306");
-
-        WebElement Password = driver.findElement(By.id("com.tutor.edunuts.mytutor:id/et_password"));
-        Password.sendKeys("password");
-
-        WebElement LOGIN = driver.findElement(By.id("com.tutor.edunuts.mytutor:id/btn_sign_in"));
-        LOGIN.click();
-*/
 
 //      driver.quit();
 
