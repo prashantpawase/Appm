@@ -35,9 +35,13 @@ public class Amazon {
         capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
      /*   capabilities.setCapability("deviceName", "Mi 4i");
         capabilities.setCapability("platformVersion", "5.0.2");
-      */
+
         capabilities.setCapability("deviceName", "pp");
         capabilities.setCapability("platformVersion", "5.1.1");
+*/
+        capabilities.setCapability("deviceName","jj");
+        capabilities.setCapability("platformVersion", "4.4.2");
+
 
         capabilities.setCapability("platformName", "Android");
         capabilities.setCapability("app", app.getAbsolutePath());
@@ -53,10 +57,12 @@ public class Amazon {
 
         WebElement Skip = driver.findElement(By.id("in.amazon.mShop.android.shopping:id/skip_sign_in_button"));
         Skip.click();
-
+/*
         WebElement Signin = driver.findElement(By.id("in.amazon.mShop.android.shopping:id/sign_in_button"));
         Signin.click();
-
+*/
+        WebElement sign = driver.findElementByName("Hello.Sign inSign inHello. Link");
+        sign.click();
 
 
         Thread.sleep(10000);
