@@ -39,15 +39,19 @@ public class chess {
           /*    capabilities.setCapability("deviceName","jj");
         capabilities.setCapability("platformVersion", "4.4.2");
 */
-      /*  capabilities.setCapability("deviceName", "pp");
+/*
+        capabilities.setCapability("deviceName", "pp");
         capabilities.setCapability("platformVersion", "5.1.1");
-      */
-        /*capabilities.setCapability("deviceName", "ss");
-        capabilities.setCapability("platformVersion", "6.0");
 */
 
+        capabilities.setCapability("deviceName", "ss");
+        capabilities.setCapability("platformVersion", "6.0");
+
+
+/*
         capabilities.setCapability("deviceName","nn");
         capabilities.setCapability("platformVersion", "7.0");
+*/
 
 
         capabilities.setCapability("platformName", "Android");
@@ -72,7 +76,8 @@ public class chess {
 
         Thread.sleep(1000);
 
-
+// Register
+/*
         WebElement Register = driver.findElementById("chess7.com:id/tv_register");
         Register.click();
 
@@ -84,8 +89,38 @@ public class chess {
 
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 
-/*
+        WebElement ad = driver.findElementById("chess7.com:id/et_address");
+        ad.sendKeys("Prashant");
+        Thread.sleep(10000);
+
+        driver.manage().timeouts().implicitlyWait(50,TimeUnit.SECONDS);
+
+        WebElement SelectState = driver.findElementById("chess7.com:id/text_state");
+        SelectState.click();
+        Thread.sleep(10000);
+
+        WebElement State = driver.findElementById("chess7.com:id/category_name");
+        State.click();
+
+        driver.manage().timeouts().implicitlyWait(50,TimeUnit.SECONDS);
+
+        WebElement Next = driver.findElementById("chess7.com:id/btn_next");
+        Next.click();
+
+        driver.manage().timeouts().implicitlyWait(50,TimeUnit.SECONDS);
+
+        WebElement PayNow = driver.findElementById("chess7.com:id/btn_pay_now");
+        PayNow.click();
+
+        Thread.sleep(10000);
+        driver.manage().timeouts().implicitlyWait(50,TimeUnit.SECONDS);
+
+        WebElement cancel = driver.findElementByName("x");
+        cancel.click();
+        */
         //My Profile
+
+        driver.manage().timeouts().implicitlyWait(50,TimeUnit.SECONDS);
 
         WebElement ImgButton = driver.findElementByClassName("android.widget.ImageButton");
         ImgButton.click();
@@ -106,7 +141,7 @@ public class chess {
 
         WebElement GISave = driver.findElementById("chess7.com:id/tv_personal_info_edit");
         GISave.click();
-*/
+
 
     }
 
