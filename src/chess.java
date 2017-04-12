@@ -31,7 +31,7 @@ public class chess {
 
         File classpathRoot = new File(System.getProperty("user.dir"));
         File appDir = new File(classpathRoot, "/AP/");
-        File app = new File(appDir, "app-debugj.apk");
+        File app = new File(appDir, "app-debugjj.apk");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
@@ -127,6 +127,12 @@ public class chess {
 
         driver.manage().timeouts().implicitlyWait(50,TimeUnit.SECONDS);
 
+        WebElement Lg = driver.findElementById("chess7.com:id/design_menu_item_text");
+        Lg.click();
+Thread.sleep(1000);
+        driver.manage().timeouts().implicitlyWait(50,TimeUnit.SECONDS);
+Thread.sleep(1000);
+        /*
         WebElement MyProfile = driver.findElement(By.name("My Profile"));
         MyProfile.click();
 
@@ -141,7 +147,7 @@ public class chess {
 
         WebElement GISave = driver.findElementById("chess7.com:id/tv_personal_info_edit");
         GISave.click();
-
+*/
 
     }
 
