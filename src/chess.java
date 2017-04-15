@@ -31,7 +31,7 @@ public class chess {
 
         File classpathRoot = new File(System.getProperty("user.dir"));
         File appDir = new File(classpathRoot, "/AP/");
-        File app = new File(appDir, "app-debugjj.apk");
+        File app = new File(appDir, "app-debugkj.apk");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
